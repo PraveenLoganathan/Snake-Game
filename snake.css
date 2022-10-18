@@ -1,0 +1,99 @@
+html, body {
+    margin: 20px;
+}
+
+#controls.playing .play-button, #controls.game-over .play-button {
+    display: none;
+}
+#controls:not(.playing) .pause-button , #controls:not(.playing) .resume-button {
+    display: none;
+}
+#controls.paused .pause-button {
+    display: none;
+}
+#controls:not(.paused) .resume-button {
+    display: none;
+}
+#controls:not(.game-over) .restart-button {
+    display: none;
+}
+
+.text{
+  color: black;
+}
+
+#board {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 60vw;
+    border: 1px solid #000;
+    margin: 20px 10vw;
+    position: relative;
+}
+
+#board.viewScoreBoard-button{
+  display: none;
+}
+
+div.row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid grey;
+}
+div.col {
+    flex: 1;
+    height: 100%;
+    border: 1px solid grey;
+}
+div.col.snake {
+    background: green !important;
+}
+
+div.col.food {
+    background: red;
+}
+
+div#gameOver {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+    background-color: white;
+    color: red;
+}
+
+#board.game-over div#gameOver{
+    display: block;
+}
+
+div#scoreBoard {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 25px;
+    box-sizing: border-box;
+    background-color: white;
+    color: Black;
+}
+
+#board.scoreBoard div#scoreBoard {
+  display: block;
+}
+
+.scoreBoardTable{
+  width: 175px;
+  font-size: 1.5rem;
+  margin: 5px auto;
+}

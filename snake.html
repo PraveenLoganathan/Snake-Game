@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <script src="snake.js"></script>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+
+<div id="controls">
+    <div>
+        <button class="play-button" onclick="game.play()">Play</button>
+        <button class="restart-button" onclick="game.restart()">Restart</button>
+        <button class="pause-button" onclick="game.snake.pause()">Pause</button>
+        <button class="resume-button" onclick="game.snake.move()">Resume</button>
+    </div>
+    <div>
+        <h2>Score: <span class="score">0</span></h2>
+    </div>
+</div>
+
+<div id="board">
+    <div id="gameOver">
+        <h1>Game Over!</h1>
+        <button class="viewScoreBoard-button" onclick="game.viewScoreBoard()">View Score Board</button>
+    </div>
+    <div id="scoreBoard">
+        <h1>Score Board</h1>
+        <table class  = "scoreBoardTable"></table>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    const board = document.getElementById('board');
+    const controls = document.getElementById('controls');
+    const game = new SnakeGame(board, controls);
+
+</script>
+
+</body>
+</html>
